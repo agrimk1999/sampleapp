@@ -6,8 +6,8 @@ app.use(express.urlencoded({extended : true}))
 app.use(express.json())
 
 app.post('/',(req,res)=> {
-    var name=req.name;
-    var age=req.age;
+    var name=req.body.name;
+    var age=req.body.age;
 
     res.send(`Name is ${name} and age is ${age}`)
 })
